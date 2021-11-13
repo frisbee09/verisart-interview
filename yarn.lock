@@ -2563,7 +2563,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:^16.11.7":
   version: 16.11.7
   resolution: "@types/node@npm:16.11.7"
   checksum: 2706403e6efc4aa40fdce8f0b5d9884d5600c3c8610aedc7fa5e7e298d30366f7e8b7296028d52898dca3edef4c3e827b03bf20952c4780f13fa4e79864f7a86
@@ -4227,7 +4227,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bson@npm:^4.2.2, bson@npm:^4.5.2":
+"bson@npm:^4.2.2, bson@npm:^4.5.2, bson@npm:^4.5.4":
   version: 4.5.4
   resolution: "bson@npm:4.5.4"
   dependencies:
@@ -10212,7 +10212,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongodb-connection-string-url@npm:^2.0.0":
+"mongodb-connection-string-url@npm:^2.0.0, mongodb-connection-string-url@npm:^2.1.0":
   version: 2.1.0
   resolution: "mongodb-connection-string-url@npm:2.1.0"
   dependencies:
@@ -10234,6 +10234,21 @@ __metadata:
     saslprep:
       optional: true
   checksum: 528fa310d3209ca35f94f081af6e1b3e4bd8582e761dfd140c4f0599e2d4d7632688b6e145b014e36bc9a11fb6ff605d936c886530858a40c32230499d4ec374
+  languageName: node
+  linkType: hard
+
+"mongodb@npm:^4.1.4":
+  version: 4.1.4
+  resolution: "mongodb@npm:4.1.4"
+  dependencies:
+    bson: ^4.5.4
+    denque: ^2.0.1
+    mongodb-connection-string-url: ^2.1.0
+    saslprep: ^1.0.3
+  dependenciesMeta:
+    saslprep:
+      optional: true
+  checksum: 8d5a3caf349bdf10d0f14ab73f55e3cc194bc9e0f740a3b0e1e089fa721af725e27d2f4916c837013e1ba2561bded9df11253dae4b1c687c341e876a36ff4815
   languageName: node
   linkType: hard
 
@@ -13515,11 +13530,13 @@ __metadata:
   resolution: "server@workspace:server"
   dependencies:
     "@types/express": ^4.17.13
+    "@types/node": ^16.11.7
     express: ^4.17.1
     express-graphql: ^0.12.0
     graphql: ^16.0.1
     graphql-compose: ^9.0.4
     graphql-compose-mongoose: ^9.7.0
+    mongodb: ^4.1.4
     mongoose: ^6.0.12
   languageName: unknown
   linkType: soft

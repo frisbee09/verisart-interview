@@ -14287,6 +14287,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["saslprep", "npm:1.0.3"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:4.1.4", {
+          "packageLocation": "./.yarn/cache/mongodb-npm-4.1.4-b34c409a0d-8d5a3caf34.zip/node_modules/mongodb/",
+          "packageDependencies": [
+            ["mongodb", "npm:4.1.4"],
+            ["bson", "npm:4.5.4"],
+            ["denque", "npm:2.0.1"],
+            ["mongodb-connection-string-url", "npm:2.1.0"],
+            ["saslprep", "npm:1.0.3"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["mongodb-connection-string-url", [
@@ -17968,11 +17979,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["server", "workspace:server"],
             ["@types/express", "npm:4.17.13"],
+            ["@types/node", "npm:16.11.7"],
             ["express", "npm:4.17.1"],
             ["express-graphql", "virtual:5e2e00b31e527ff544c90eb3e3e3e977a366e52a6e25602d03686a4c9a155eee4d7b92ccdea0b04275344f5b2189eb629d123eb4cc6e1b883b42aea6d965568d#npm:0.12.0"],
             ["graphql", "npm:16.0.1"],
             ["graphql-compose", "virtual:5e2e00b31e527ff544c90eb3e3e3e977a366e52a6e25602d03686a4c9a155eee4d7b92ccdea0b04275344f5b2189eb629d123eb4cc6e1b883b42aea6d965568d#npm:9.0.4"],
             ["graphql-compose-mongoose", "virtual:5e2e00b31e527ff544c90eb3e3e3e977a366e52a6e25602d03686a4c9a155eee4d7b92ccdea0b04275344f5b2189eb629d123eb4cc6e1b883b42aea6d965568d#npm:9.7.0"],
+            ["mongodb", "npm:4.1.4"],
             ["mongoose", "npm:6.0.12"]
           ],
           "linkType": "SOFT",
