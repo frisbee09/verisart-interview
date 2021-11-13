@@ -2,13 +2,20 @@ import * as mongoose from "mongoose";
 
 let mongooseClient: typeof mongoose;
 
-const url = process.env.DB_HOST || "";
-const db = process.env.DB_NAME || "";
+import dbConfig from "./dbConfig";
+const { DB_NAME, DB_HOST } = dbConfig;
 
 export const getMongooseConnection = async () => {
-  if (mongooseClient) return mongooseClient.connection;
+  
+  if (mongooseClient) {
+    console.log(`Reconnection success`);
+    return mongooseClient.connection;
+  }
 
-  mongooseClient = await mongoose.connect(`${url}/${db}`);
+  mongooseClient = await mongoose.connect(`${DB_HOST}${DB_NAME}`, {
+    autoIndex: false,
+  });
+  console.log(`Connection success`);
 
   return mongooseClient.connection;
 };

@@ -5439,7 +5439,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.6.5":
+"core-js@npm:^3.19.1, core-js@npm:^3.6.5":
   version: 3.19.1
   resolution: "core-js@npm:3.19.1"
   checksum: 2f669061788dc6fea823f0433d871deeaaaacc7d68ef2748859509522a34df5c83e648c3c6a1993fed0ab188081b3cf32b957b2a1f46156a2b20bd775961ade4
@@ -13597,7 +13597,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.7":
+"regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.7, regenerator-runtime@npm:^0.13.9":
   version: 0.13.9
   resolution: "regenerator-runtime@npm:0.13.9"
   checksum: 65ed455fe5afd799e2897baf691ca21c2772e1a969d19bb0c4695757c2d96249eb74ee3553ea34a91062b2a676beedf630b4c1551cc6299afb937be1426ec55e
@@ -14377,6 +14377,7 @@ __metadata:
     babel-loader: ^8.2.3
     circular-dependency-plugin: ^5.2.2
     clean-webpack-plugin: ^4.0.0
+    core-js: ^3.19.1
     express: ^4.17.1
     express-graphql: ^0.12.0
     graphql: ^16.0.1
@@ -14385,6 +14386,7 @@ __metadata:
     mongodb: ^4.1.4
     mongoose: ^6.0.12
     nodemon-webpack-plugin: ^4.5.2
+    regenerator-runtime: ^0.13.9
     terser-webpack-plugin: ^5.2.5
     webpack: ^5.64.0
     webpack-nano: ^1.1.1

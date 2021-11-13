@@ -2,6 +2,7 @@
   "name": "server",
   "packageManager": "yarn@3.1.0",
   "dependencies": {
+    "core-js": "^3.19.1",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "graphql": "^16.0.1",
@@ -9,6 +10,7 @@
     "graphql-compose-mongoose": "^9.7.0",
     "mongodb": "^4.1.4",
     "mongoose": "^6.0.12",
+    "regenerator-runtime": "^0.13.9",
     "webpack-nano": "^1.1.1"
   },
   "devDependencies": {
