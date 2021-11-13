@@ -19,6 +19,6 @@ const ArtistSchema = new Schema<IArtist>({
 });
 
 export const Artist = model<IArtist, Model<IArtist, {}, ArtistModel>>(
-  "Artists",
+  "artists",
   ArtistSchema
 );
