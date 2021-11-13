@@ -1,4 +1,5 @@
 import { Model, model, ObjectId, Schema, Types } from "mongoose";
+import { IArtist } from "./Artist";
 
 /**
  * Raw document type

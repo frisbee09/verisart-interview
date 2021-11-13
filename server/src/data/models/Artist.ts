@@ -11,9 +11,7 @@ export interface IArtist {
 /**
  * Any virtuals can go here
  */
-export interface ArtistModel extends IArtist {
-  certificates: any[];
-}
+export interface ArtistModel extends IArtist {}
 
 const ArtistSchema = new Schema<IArtist>({
   firstName: String,

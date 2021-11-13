@@ -6,11 +6,14 @@ import { graphqlHTTP } from "express-graphql";
 import { getMongooseConnection } from "./data/getMongoConnection";
 import gqlSchema from "./schema";
 import { resolve } from "path";
+import * as cors from "cors";
 
 getMongooseConnection().then(() => {
   const app = express();
   const publicFolder = resolve(process.cwd(), "public");
   console.log(`Serving static 🖼️ from ${publicFolder}`);
+  app.use(cors());
+  app.use(express.json());
   app.use("/static", express.static(publicFolder));
   app.use(
     "/graphql",

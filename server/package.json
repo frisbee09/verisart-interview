@@ -3,6 +3,7 @@
   "packageManager": "yarn@3.1.0",
   "dependencies": {
     "core-js": "^3.19.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "graphql": "^16.0.1",
@@ -21,6 +22,7 @@
     "@types/babel__core": "^7",
     "@types/babel__preset-env": "^7",
     "@types/circular-dependency-plugin": "^5",
+    "@types/cors": "^2",
     "@types/express": "^4.17.13",
     "@types/node": "^16.11.7",
     "babel-loader": "^8.2.3",

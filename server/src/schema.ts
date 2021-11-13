@@ -5,6 +5,14 @@ import { Certificate } from "./data/models/Certificate";
 
 const ArtistTC = composeMongoose(Artist);
 const CertificateTC = composeMongoose(Certificate);
+CertificateTC.addRelation("artist", {
+  resolver: () => ArtistTC.mongooseResolvers.findOne(),
+  prepareArgs: {
+    filter: (source) => ({
+      _id: source.artistId,
+    }),
+  },
+});
 
 schemaComposer.Query.addFields({
   getCertificates: CertificateTC.mongooseResolvers.findMany(),
