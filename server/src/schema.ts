@@ -18,6 +18,7 @@ CertificateTC.addRelation("artist", {
 schemaComposer.Query.addFields({
   getCertificates: CertificateTC.mongooseResolvers.findMany(),
   getCertificate: CertificateTC.mongooseResolvers.findOne(),
+  getArtists: ArtistTC.mongooseResolvers.findMany(),
 });
 
 schemaComposer.Mutation.addFields({

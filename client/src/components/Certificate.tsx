@@ -2,13 +2,13 @@ import * as React from "react";
 import styled from "styled-components";
 import { ICertificate } from "../service/types";
 
-const StyledCertificate = styled.div`
+export const StyledCertificate = styled.div`
   border-radius: 5px;
   border: 1px solid rgb(190, 190, 190);
   overflow: hidden;
   background: rgb(230, 230, 230);
   box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
-  
+
   /* Lay down the law for the images */
   min-height: 20rem;
   max-height: 40rem;
@@ -41,12 +41,18 @@ const StyledCertificate = styled.div`
   }
 `;
 
-interface ICertificateProps extends ICertificate {}
+interface ICertificateProps extends ICertificate {
+  className?: string;
+}
 
 const Certificate: React.FC<ICertificateProps> = (props) => {
   return (
-    <StyledCertificate>
-      <img src={`http://localhost:3001/${props.imgUrl}`} />
+    <StyledCertificate className={props.className}>
+      <img
+        src={`http://localhost:3001/${
+          props.imgUrl || "static/art/kelly-sikkema-l-lgKl4HNHM-unsplash.jpg"
+        }`}
+      />
       <div>
         <p>{props.title}</p>
         <p>

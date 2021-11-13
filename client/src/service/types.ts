@@ -8,6 +8,7 @@ export type ICertificate = Partial<{
   _id: string;
   imgUrl: string;
   title: string;
+  artistId?: string;
   artist: IArtist;
   year: number;
   dateAdded: Date;

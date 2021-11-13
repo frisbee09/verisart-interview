@@ -1,3 +1,5 @@
+import { ICertificate } from "./types";
+
 const SERVICE_HOST = "http://localhost:3001";
 const GQL_URL = `${SERVICE_HOST}/graphql`;
 const gqlFetch = (query: string, variables?: any) =>
@@ -28,8 +30,33 @@ const getCertificates = () =>
 }
 `).then((r) => r.data.getCertificates);
 
+const getArtists = () =>
+  gqlFetch(`
+  {
+    getArtists {
+    _id
+    firstName
+    lastName
+  }
+}
+`).then((r) => r.data.getArtists);
+
+const createCertificate = (certificate: ICertificate) =>
+  gqlFetch(
+    `
+  mutation ($record: CreateOnecertificatesInput!) {
+    createCertificate (record: $record) {
+      recordId
+    }
+  }
+`,
+    { record: certificate }
+  ).then((r) => r.data.createCertificate);
+
 const CertService = {
   getCertificates,
+  getArtists,
+  createCertificate,
 };
 
 export default CertService;

@@ -6,6 +6,7 @@ import { ICertificate } from "./service/types";
 import CertService from "./service/CertService";
 import Loading from "./components/Loading";
 import Certificate from "./components/Certificate";
+import CertificateForm from "./components/CertificateForm";
 
 const Header = styled.header`
   height: 4rem;
@@ -25,6 +26,8 @@ const AppWrapper = styled.div`
   * {
     box-sizing: border-box;
   }
+
+  /* position: relative; */
 `;
 
 const CertificatesWrapper = styled.div`
@@ -45,10 +48,34 @@ const CertificatesWrapper = styled.div`
   }
 `;
 
+const CreateButton = styled.button`
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 3rem;
+  line-height: 0;
+`;
+
+const CloseButton = styled.button`
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 3rem;
+  line-height: 0;
+`;
+
 const App = () => {
   const [certData, setCertData] = React.useState<ICertificate[]>([]);
   const [loadingCert, setLoading] = React.useState<boolean>(false);
   const [failureMessage, setFail] = React.useState<string>("");
+
+  const [showCreateUi, setCreateDisplay] = React.useState<boolean>(false);
 
   // On mount, fetch certs
   React.useEffect(() => {
@@ -85,6 +112,15 @@ const App = () => {
         <h2>CERTIFICATES</h2>
         <div>{renderCerts()}</div>
       </CertificatesWrapper>
+      <CreateButton onClick={(e) => setCreateDisplay(true)}>+</CreateButton>
+      {showCreateUi && (
+        <>
+          <CertificateForm />
+          <CloseButton onClick={(e) => setCreateDisplay(false)}>
+            &times;
+          </CloseButton>
+        </>
+      )}
     </AppWrapper>
   );
 };
