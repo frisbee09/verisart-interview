@@ -34,6 +34,14 @@ const CertificatesWrapper = styled.div`
     flex-flow: row wrap;
 
     justify-content: space-between;
+
+    > * {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    /* So the margin looks nice on the right hand space, accounting for the
+    margin-right of children */
+    margin-right: -20px;
   }
 `;
 

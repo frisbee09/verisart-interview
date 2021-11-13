@@ -8,10 +8,7 @@ const StyledCertificate = styled.div`
   overflow: hidden;
   background: rgb(230, 230, 230);
   box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
-
-  margin-right: 20px;
-  margin-bottom: 20px;
-
+  
   /* Lay down the law for the images */
   min-height: 20rem;
   max-height: 40rem;
@@ -34,12 +31,10 @@ const StyledCertificate = styled.div`
     color: rgb(220, 220, 220);
     opacity: 0.5;
     width: 100%;
-    height: 30%;
 
     display: flex;
     flex-direction: column;
-    padding-left: 1rem;
-    padding-top: 1rem;
+    padding: 1rem;
     > p {
       margin: 0;
     }
