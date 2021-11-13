@@ -6,6 +6,7 @@ import { Model, model, Schema } from "mongoose";
 export interface IArtist {
   firstName: string;
   lastName: string;
+  certificates: any[];
 }
 
 /**
