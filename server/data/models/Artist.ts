@@ -6,13 +6,14 @@ import { Model, model, Schema } from "mongoose";
 export interface IArtist {
   firstName: string;
   lastName: string;
-  certificates: any[];
 }
 
 /**
  * Any virtuals can go here
  */
-export interface ArtistModel extends IArtist {}
+export interface ArtistModel extends IArtist {
+  certificates: any[];
+}
 
 const ArtistSchema = new Schema<IArtist>({
   firstName: String,

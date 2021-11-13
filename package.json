@@ -14,5 +14,8 @@
   },
   "scripts": {
     "start": "yarn concurrently \"yarn client:start\""
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0"
   }
 }
