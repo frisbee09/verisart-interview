@@ -6,16 +6,12 @@ import { Certificate } from "./data/models/Certificate";
 const ArtistTC = composeMongoose(Artist);
 const CertificateTC = composeMongoose(Certificate);
 CertificateTC.addRelation("artist", {
-  resolver: () => ArtistTC.mongooseResolvers.findOne(),
+  resolver: () => ArtistTC.mongooseResolvers.dataLoader({ lean: true }),
   prepareArgs: {
-    filter: (source) => ({
-      _id: source.artistId,
-    }),
+    _id: (source) => source.artistId,
   },
-  extensions: {
-    projection: {
-      artistId: true,
-    },
+  projection: {
+    artistId: true,
   },
 });
 
