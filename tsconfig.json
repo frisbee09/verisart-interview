@@ -4,11 +4,10 @@
     "module": "esnext",
     "moduleResolution": "node",
     "sourceMap": true,
-    "jsx": "react",
     "strict": true,
     "alwaysStrict": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "types/**/*"],
   "exclude": ["node_modules", "**/node_modules/*/**"],
   "ts-node": {
     "compilerOptions": {

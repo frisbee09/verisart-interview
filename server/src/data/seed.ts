@@ -110,6 +110,7 @@ const seed = async () => {
     // Create new collections
     const artists = db.collection("artists");
     const certs = db.collection("certificates");
+    certs.createIndex({ artistId: 1 });
 
     for await (const artist of seedData) {
       const insertedArtist = await artists.insertOne(artist);
