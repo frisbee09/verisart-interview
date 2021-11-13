@@ -2,17 +2,12 @@ import * as mongoose from "mongoose";
 
 let mongooseClient: typeof mongoose;
 
-const setupListeners = (connection: mongoose.Connection) => {
-  connection.on("connected", () => {
-    console.log("(re)?connected to mongodb.");
-  });
-};
+const connectionString = process.env.DB_CONN_STRING || "";
 
 export const getMongooseConnection = async () => {
   if (mongooseClient) return mongooseClient.connection;
 
-  mongooseClient = await mongoose.connect(process.env.DB_CONN_STRING);
+  mongooseClient = await mongoose.connect(connectionString);
 
-  setupListeners(mongooseClient.connection);
   return mongooseClient.connection;
 };
