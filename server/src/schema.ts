@@ -12,6 +12,11 @@ CertificateTC.addRelation("artist", {
       _id: source.artistId,
     }),
   },
+  extensions: {
+    projection: {
+      artistId: true,
+    },
+  },
 });
 
 schemaComposer.Query.addFields({
