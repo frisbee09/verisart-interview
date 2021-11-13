@@ -13,11 +13,12 @@ const StyledCertificate = styled.div`
   margin-bottom: 20px;
 
   /* Lay down the law for the images */
-  max-height: 20rem;
-  max-width: 20rem;
+  min-height: 20rem;
+  max-height: 40rem;
+  min-width: 20rem;
+  max-width: 40rem;
+  flex: 1;
   > img {
-    max-width: 100%;
-    max-height: 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
